@@ -1,2 +1,2 @@
 # calculator
-An online calculator for math.
+An online calculator for basic math operations.
