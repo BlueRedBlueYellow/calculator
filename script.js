@@ -1,3 +1,7 @@
+const calc = document.querySelector('#calculator');
+const calcButtons = document.querySelectorAll('button');
+const display = document.querySelectorAll('#display');
+
 let operator;
 let firstNumber;
 let secondNumber;
