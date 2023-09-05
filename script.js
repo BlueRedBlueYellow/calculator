@@ -1,4 +1,8 @@
 const calc = document.querySelector('#calculator');
+const numberButtons = document.querySelectorAll('.number');
+const operatorButtons = document.querySelectorAll('.operator');
+const clear = document.querySelector('.clear');
+const calculate = document.querySelector('#calculate');
 const display = document.querySelector('#display');
 
 let operator;
