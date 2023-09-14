@@ -2,7 +2,7 @@ const calc = document.querySelector('#calculator');
 const numberButtons = document.querySelectorAll('.number');
 const operatorButtons = document.querySelectorAll('.operator');
 const clear = document.querySelector('.clear');
-const calculate = document.querySelector('#calculate');
+const calculateButton = document.querySelector('#calculate');
 const display = document.querySelector('#display');
 
 let operator;
@@ -49,6 +49,14 @@ function addDigit(element) {
 }
 }
 
-numberButtons.forEach(button => button.addEventListener('click', addToDisplay));
+function calculate() {
+    if (firstNumber && currentDisplay) {
+        secondNumber = currentDisplay;
+        updateDisplay(operate(operator, firstNumber, secondNumber));
+        firstNumber = currentDisplay;
+        secondNumber = "";
+    }
+}
 
 numberButtons.forEach(button => button.addEventListener('click', addDigit));
+calculateButton.addEventListener('click', calculate);
