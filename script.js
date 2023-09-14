@@ -11,7 +11,7 @@ let secondNumber;
 let currentDisplay = "";
 
 function add(int1, int2) {
-    return int1 + int2;
+    return parseInt(int1) + parseInt(int2);
 }
 
 function subtract(int1, int2) {
