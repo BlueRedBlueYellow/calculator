@@ -26,8 +26,19 @@ function divide(int1, int2) {
     return int1 / int2;
 }
 
-function operate(operation, int1, int2) {
-    return operation(int1, int2)
+function operate(operator, int1, int2) {
+    switch (operator) {
+        case "+":
+            return add(int1, int2);
+        case "-":
+            return subtract(int1, int2);
+        case "*":
+            return multiply(int1, int2);
+        case "/":
+            return divide(int1, int2);
+    }
+}
+
 }
 
 function addToDisplay(element) {
