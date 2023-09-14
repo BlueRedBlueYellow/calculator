@@ -47,6 +47,15 @@ function updateDisplay(text) {
 function addDigit(element) { 
     updateDisplay(currentDisplay += element.target.innerText);
 }
+
+function setOperator(element) {
+    operator = element.target.innerText;
+    if (!firstNumber) {
+        firstNumber = currentDisplay;
+    } else if (!secondNumber) {
+        calculate();
+    }
+    currentDisplay = "";
 }
 
 function calculate() {
@@ -59,4 +68,5 @@ function calculate() {
 }
 
 numberButtons.forEach(button => button.addEventListener('click', addDigit));
+operatorButtons.forEach(button => button.addEventListener('click', setOperator));
 calculateButton.addEventListener('click', calculate);
