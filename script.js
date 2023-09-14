@@ -39,6 +39,9 @@ function operate(operator, int1, int2) {
     }
 }
 
+function updateDisplay(text) {
+    display.innerText = text;
+    currentDisplay = text;
 }
 
 function addToDisplay(element) {
