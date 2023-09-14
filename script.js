@@ -44,10 +44,11 @@ function updateDisplay(text) {
     currentDisplay = text;
 }
 
-function addToDisplay(element) {
-    currentDisplay += element.target.innerText;
-    display.innerText = currentDisplay;
-    console.log(currentDisplay)
+function addDigit(element) { 
+    updateDisplay(currentDisplay += element.target.innerText);
+}
 }
 
 numberButtons.forEach(button => button.addEventListener('click', addToDisplay));
+
+numberButtons.forEach(button => button.addEventListener('click', addDigit));
