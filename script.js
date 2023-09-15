@@ -69,6 +69,7 @@ function calculate() {
     if (firstNumber && currentDisplay) {
         secondNumber = currentDisplay;
         updateDisplay(operate(operator, firstNumber, secondNumber));
+
         firstNumber = currentDisplay;
         secondNumber = "";
     }
