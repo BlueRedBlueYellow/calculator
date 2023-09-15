@@ -44,7 +44,7 @@ function updateDisplay(text) {
     currentDisplay = text;
 }
 
-function addDigit(element) { 
+function addDigit(element) {
     updateDisplay(currentDisplay += element.target.innerText);
 }
 
@@ -64,6 +64,7 @@ function clear() {
     operator = "";
     updateDisplay("");
 }
+
 function calculate() {
     if (firstNumber && currentDisplay) {
         secondNumber = currentDisplay;
