@@ -8,7 +8,7 @@ const display = document.querySelector('#display');
 let operator;
 let firstNumber;
 let secondNumber;
-let currentDisplay = "";
+let displayValue = "";
 
 function add(int1, int2) {
     return parseInt(int1) + parseInt(int2);
@@ -41,21 +41,21 @@ function operate(operator, int1, int2) {
 
 function updateDisplay(text) {
     display.innerText = text;
-    currentDisplay = text;
+    displayValue = text;
 }
 
 function addDigit(element) {
-    updateDisplay(currentDisplay += element.target.innerText);
+    updateDisplay(displayValue += element.target.innerText);
 }
 
 function setOperator(element) {
     if (!firstNumber) {
-        firstNumber = currentDisplay;
+        firstNumber = displayValue;
     } else if (!secondNumber) {
         calculate();
     }
     operator = element.target.innerText;
-    currentDisplay = "";
+    displayValue = "";
 }
 
 function clear() {
@@ -66,11 +66,11 @@ function clear() {
 }
 
 function calculate() {
-    if (firstNumber && currentDisplay) {
-        secondNumber = currentDisplay;
+    if (firstNumber && displayValue) {
+        secondNumber = displayValue;
         updateDisplay(operate(operator, firstNumber, secondNumber));
 
-        firstNumber = currentDisplay;
+        firstNumber = displayValue;
         secondNumber = "";
     }
 }
