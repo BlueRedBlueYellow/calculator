@@ -1,5 +1,5 @@
 const calc = document.querySelector('#calculator');
-const numberButtons = document.querySelectorAll('.number');
+const digitButtons = document.querySelectorAll('.digit');
 const operatorButtons = document.querySelectorAll('.operator');
 const clearButton = document.querySelector('#clear');
 const calculateButton = document.querySelector('#calculate');
@@ -75,7 +75,7 @@ function calculate() {
     }
 }
 
-numberButtons.forEach(button => button.addEventListener('click', addDigit));
+digitButtons.forEach(button => button.addEventListener('click', addDigit));
 operatorButtons.forEach(button => button.addEventListener('click', setOperator));
 clearButton.addEventListener('click', clear);
 calculateButton.addEventListener('click', calculate);
