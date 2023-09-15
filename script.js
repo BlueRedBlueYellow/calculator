@@ -45,6 +45,9 @@ function updateDisplay(text) {
 }
 
 function addDigit(element) {
+    if (element.target.innerText === "." && displayValue.includes(".")) {
+        return;
+    }
     updateDisplay(displayValue += element.target.innerText);
 }
 
