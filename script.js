@@ -1,7 +1,7 @@
 const calc = document.querySelector('#calculator');
 const numberButtons = document.querySelectorAll('.number');
 const operatorButtons = document.querySelectorAll('.operator');
-const clear = document.querySelector('.clear');
+const clearButton = document.querySelector('#clear');
 const calculateButton = document.querySelector('#calculate');
 const display = document.querySelector('#display');
 
@@ -58,6 +58,12 @@ function setOperator(element) {
     currentDisplay = "";
 }
 
+function clear() {
+    firstNumber = "";
+    secondNumber = "";
+    operator = "";
+    updateDisplay("");
+}
 function calculate() {
     if (firstNumber && currentDisplay) {
         secondNumber = currentDisplay;
@@ -69,4 +75,5 @@ function calculate() {
 
 numberButtons.forEach(button => button.addEventListener('click', addDigit));
 operatorButtons.forEach(button => button.addEventListener('click', setOperator));
+clearButton.addEventListener('click', clear);
 calculateButton.addEventListener('click', calculate);
