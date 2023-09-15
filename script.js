@@ -49,12 +49,12 @@ function addDigit(element) {
 }
 
 function setOperator(element) {
-    operator = element.target.innerText;
     if (!firstNumber) {
         firstNumber = currentDisplay;
     } else if (!secondNumber) {
         calculate();
     }
+    operator = element.target.innerText;
     currentDisplay = "";
 }
 
