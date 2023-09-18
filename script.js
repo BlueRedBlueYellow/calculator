@@ -2,6 +2,7 @@ const calc = document.querySelector('#calculator');
 const digitButtons = document.querySelectorAll('.digit');
 const operatorButtons = document.querySelectorAll('.operator');
 const clearButton = document.querySelector('#clear');
+const backspaceButton = document.querySelector('#backspace');
 const calculateButton = document.querySelector('#calculate');
 const display = document.querySelector('#display');
 
@@ -68,6 +69,10 @@ function clear() {
     updateDisplay("");
 }
 
+function backspace() {
+    updateDisplay(displayValue.slice(0, -1));
+}
+
 function calculate() {
     if (firstNumber && displayValue) {
         secondNumber = displayValue;
@@ -81,4 +86,5 @@ function calculate() {
 digitButtons.forEach(button => button.addEventListener('click', addDigit));
 operatorButtons.forEach(button => button.addEventListener('click', setOperator));
 clearButton.addEventListener('click', clear);
+backspaceButton.addEventListener('click', backspace);
 calculateButton.addEventListener('click', calculate);
