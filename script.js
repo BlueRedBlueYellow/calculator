@@ -12,7 +12,7 @@ let secondNumber;
 let displayValue = "";
 
 function add(int1, int2) {
-    return parseInt(int1) + parseInt(int2);
+    return parseFloat(int1) + parseFloat(int2);
 }
 
 function subtract(int1, int2) {
