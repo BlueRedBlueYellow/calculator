@@ -46,10 +46,16 @@ function updateDisplay(text) {
 }
 
 function addDigit(element) {
-    if (element.target.innerText === "." && displayValue.includes(".")) {
-        return;
+    digit = element.target.innerText;
+    if (digit === ".") {
+        if (displayValue.includes(".")) {
+            return;
+        } else if (displayValue == "") {
+            digit = "0."
+        }
     }
-    updateDisplay(displayValue += element.target.innerText);
+
+    updateDisplay(displayValue += digit);
 }
 
 function setOperator(element) {
