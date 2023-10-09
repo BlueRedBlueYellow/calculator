@@ -27,6 +27,10 @@ function divide(int1, int2) {
     return int1 / int2;
 }
 
+function remainder(int1, int2) {
+    return int1 % int2;
+}
+
 function operate(operator, int1, int2) {
     switch (operator) {
         case "+":
@@ -37,6 +41,8 @@ function operate(operator, int1, int2) {
             return multiply(int1, int2);
         case "/":
             return divide(int1, int2);
+        case "%":
+            return remainder(int1, int2);
     }
 }
 
