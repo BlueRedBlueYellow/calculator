@@ -21,6 +21,7 @@ body {
 
 #buttons {
     display: grid;
+    gap: 5px;
     width: 300px;
     height: 350px;
     grid-template-columns: repeat(4, 1fr);
