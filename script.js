@@ -1,9 +1,9 @@
 const calc = document.querySelector('#calculator');
 const digitButtons = document.querySelectorAll('.digit');
 const operatorButtons = document.querySelectorAll('.operator');
-const clearButton = document.querySelector('#clear');
-const backspaceButton = document.querySelector('#backspace');
-const calculateButton = document.querySelector('#calculate');
+const clearButton = document.querySelector('.clear');
+const backspaceButton = document.querySelector('.backspace');
+const calculateButton = document.querySelector('.calculate');
 const display = document.querySelector('#display');
 
 let operator;
