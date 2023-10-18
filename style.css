@@ -29,11 +29,32 @@ body {
 
 }
 
-#calculator button {
+button {
+    background-color: white;
+    border: solid 1px rgb(126, 126, 126);
+    border-radius: 10px;
     font-size: 30px;
+    transition: background-color 0.15s;
 }
 
-#calculator #zero {
+button:hover {
+    background-color: rgba(255, 255, 255, 0.50);
+}
+
+#calculator button:active {
+    background-color: rgb(110, 110, 110);
+}
+
+.calculate, .clear, .backspace, .operator {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.digit:hover {
+    background-color: lightblue;
+}
+
+#zero {
     grid-column: span 2;
 }
 
