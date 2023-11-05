@@ -47,6 +47,11 @@ function operate(operator, int1, int2) {
 }
 
 function updateDisplay(text) {
+    const displayCharLimit = 14;
+    if (String(text).length > displayCharLimit) {
+        text = parseFloat(text).toExponential(displayCharLimit - 7);
+    }
+    
     display.innerText = text;
     displayValue = text;
 }
