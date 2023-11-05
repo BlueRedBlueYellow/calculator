@@ -11,24 +11,24 @@ let firstNumber;
 let secondNumber;
 let displayValue = "";
 
-function add(int1, int2) {
-    return parseFloat(int1) + parseFloat(int2);
+function add(addend1, addend2) {
+    return parseFloat(addend1) + parseFloat(addend2);
 }
 
-function subtract(int1, int2) {
-    return int1 - int2;
+function subtract(minuend, subtrahend) {
+    return minuend - subtrahend;
 }
 
-function multiply(int1, int2) {
-    return int1 * int2;
+function multiply(factor1, factor2) {
+    return factor1 * factor2;
 }
 
-function divide(int1, int2) {
-    return int1 / int2;
+function divide(dividend, divisor) {
+    return dividend / divisor;
 }
 
-function remainder(int1, int2) {
-    return int1 % int2;
+function remainder(dividend, divisor) {
+    return dividend % divisor;
 }
 
 function operate(operator, int1, int2) {
