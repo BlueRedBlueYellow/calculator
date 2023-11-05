@@ -88,7 +88,13 @@ function backspace() {
 function calculate() {
     if (firstNumber && displayValue) {
         secondNumber = displayValue;
-        updateDisplay(operate(operator, firstNumber, secondNumber));
+        
+        if (operator === "/" && secondNumber == 0) {
+            updateDisplay("...no.");
+            displayValue = "";
+        } else {
+            updateDisplay(operate(operator, firstNumber, secondNumber));
+        }
 
         firstNumber = displayValue;
         secondNumber = "";
